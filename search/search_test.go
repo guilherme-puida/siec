@@ -34,7 +34,7 @@ func Test_nextSiec(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotT, gotQ := nextSiec(tt.args.M)
+			gotQ, gotT := nextSiec(tt.args.M)
 			if !reflect.DeepEqual(gotT, tt.wantT) {
 				t.Errorf("nextSiec() gotT = %v, want %v", gotT, tt.wantT)
 			}
